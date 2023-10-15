@@ -1,0 +1,106 @@
+.photo {
+    margin: auto;
+    height: 76rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px -14px #000;
+    display: grid;
+    grid-template-columns: 76rem 50rem;
+    grid-template-rows: auto 1fr auto;
+    overflow: hidden;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: scaleUp 0.3s forwards;
+}
+
+.photo.photoSingle {
+    grid-template-columns: 1fr;
+    height: auto;
+}
+
+.details {
+    padding: 3rem;
+}
+
+.photo.photoSingle .details {
+    padding: 1rem 0 0 0;
+}
+
+.img {
+    grid-row: 1/4;
+}
+
+.photo.photoSingle .img {
+    grid-row: 1;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.comments {
+    padding: 0 2rem;
+}
+
+@media (max-width: 90rem) {
+    .photo {
+        height: auto;
+        /* max-height: calc(100vh - 5rem); */
+        max-height: 100%;
+        overflow-y: auto;
+        /* uma coluna de no minimo 20rem e no maximo 76rem */
+        grid-template-columns: minmax(20rem, 76rem);
+    }
+    .img {
+        grid-row: 1;
+    }
+}
+
+.author {
+    opacity: 0.5;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.author a:hover {
+    text-decoration: underline;
+}
+
+.visualizacoes::before {
+    content: '';
+    display: inline-block;
+    width: 2rem;
+    height: 1rem;
+    margin-right: 0.7rem;
+    background: url('../../Assets/visualizacao-black.svg') no-repeat;
+}
+
+.attributes {
+    display: flex;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 2rem 0;
+}
+
+.attributes li {
+    margin-right: 3rem;
+}
+
+.attributes li::before {
+    content: '';
+    display: inline-block;
+    height: 2rem;
+    margin-right: 1rem;
+    position: relative;
+    top: 0.3rem;
+    width: 0.3rem;
+    background: black;
+    margin-top: 0.5rem;
+}
+
+@keyframes scaleUp {
+    to {
+        opacity: initial;
+        transform: initial;
+    }
+}

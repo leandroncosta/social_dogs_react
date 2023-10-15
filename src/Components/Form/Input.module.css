@@ -1,0 +1,33 @@
+.wrapper {
+    margin-bottom: 2rem;
+}
+
+.wrapper input {
+    border: 1px solid #eee;
+    width: 100%;
+    font-size: 2rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: #eee;
+    transition: all 0.5s ease;
+}
+
+.wrapper input:focus,
+.wrapper input:hover {
+    border-color: #fb1;
+    background: #fff;
+    box-shadow: 0 0 0 0.5rem #fea;
+}
+
+.wrapper label {
+    display: block;
+    font-size: 2rem;
+    line-height: 1;
+    padding-bottom: 1rem;
+}
+
+.error {
+    color: #f31;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}

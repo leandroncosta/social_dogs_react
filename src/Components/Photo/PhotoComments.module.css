@@ -1,0 +1,13 @@
+.comments {
+    overflow-y: auto;
+    word-break: break-word;
+    padding: 0 3rem;
+}
+
+.comments.photoSingle {
+    padding: 0;
+}
+.comments li {
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+}

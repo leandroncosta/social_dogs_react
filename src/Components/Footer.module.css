@@ -1,0 +1,10 @@
+.footer {
+    background: #fb1;
+    padding: 4rem 2rem 0 2rem;
+    height: 15rem;
+    text-align: center;
+    color: #764701;
+}
+.footer p {
+    margin-top: 2rem;
+}

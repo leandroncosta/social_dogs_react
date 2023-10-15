@@ -1,0 +1,14 @@
+{
+    "git.enabled": false,
+    "files.associations": {
+        "*.js": "javascriptreact"
+    },
+    "files.exclude": {
+        "node_modules": true,
+        ".vscode": false,
+        ".gitignore": false,
+        "package.json": false,
+        "package-lock.json": true,
+        "public": false
+    }
+}

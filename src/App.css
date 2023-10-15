@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@700&display=swap');
+
+:root {
+    font-size: 62.5%; /*1rem = 10px */
+    --type-first: Helvetica, Arial, sans-serif;
+    --type-second: 'Spectral', Georgia;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    font-family: var(--type-first);
+    /* border-bottom: 1px solid black; */
+}
+
+html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-synthesis: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    min-height: 100vh;
+    padding-top: 8rem;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0;
+}
+
+a,
+button {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a {
+    color: #333;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+button,
+input {
+    display: block;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.container {
+    max-width: 100rem;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+.mainContainer {
+    margin-top: 5rem;
+}
+
+.title {
+    font-family: var(--type-second);
+    line-height: 1;
+    font-size: 6rem;
+    margin: 1.5rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.title::after {
+    content: '';
+    display: block;
+    background: #fb1;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 0.3rem;
+    position: absolute;
+    bottom: 0.5rem;
+    left: -0.8rem;
+    z-index: -1;
+}
+
+.loading {
+    width: 10rem;
+    height: 10rem;
+    top: calc(50% - 5rem);
+    left: calc(50% - 5rem);
+    position: absolute;
+    background: transparent;
+    border: 2rem dotted transparent;
+    border-top: 1rem dotted #fb1;
+    border-left: 0.7rem dotted #fb1;
+    border-radius: 50%;
+    animation: is-loading 1s infinite forwards;
+}
+
+.animeLeft {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: animeLeft 0.3s forwards;
+}
+
+@keyframes animeLeft {
+    to {
+        opacity: 1;
+        transform: initial;
+    }
+}
+
+@keyframes is-loading {
+    to {
+        transform: rotate(1turn);
+        opacity: initial;
+    }
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+    background: initial;
+    padding: 1rem;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #b3b3b3;
+    border-radius: 20px;
+    border: 3px solid #fff;
+}
+/* 
+estilo para deixar o footer sempre em baixo */
+.App {
+    display: flex;
+    flex-direction: column;
+    /* 15 rem é o tamanho do footer  */
+    min-height: calc(100vh + 15rem);
+}
+
+.AppBody {
+    flex: 1;
+}
